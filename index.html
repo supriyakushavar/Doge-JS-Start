@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <title>Javascript</title>
+    <link href="style.css" rel="stylesheet" /> 
+</head>
+<body >
+    <div class="container" onload='myfunction()'>
+        <button type="button"   onmouseover='putImage()' class="btn btn-primary btn-lg" id="doge">
+            Doggo
+        </button>
+        <img src="doge.png" id="doge-image" />
+    </div>
+    <script src="script.js" ></script>
+    <script>
+        var myvar;
+        myvar = setTimeout(myfunction,1000);
+        function myfunction(){
+            document.getElementById('doge').innerHTML="Woof!";
+        }
+        function putImage(){
+            document.getElementById('doge-image').style.display="block";
+        }
+        let button = document.getElementById('doge');
+       
+        var count = 0;
+        button.addEventListener("click",function counter(){
+            if(count ==0){
+                firstclick();
+            }else{
+                secondclick();
+            }
+        });
+        function firstclick(){
+            document.getElementById("doge-image").style.marginLeft="800px";
+            count++;
+        }
+        function secondclick(){
+            document.getElementById("doge-image").style.display="none";
+            console.log("2");
+        }
+    </script>
+</body>
+</html>

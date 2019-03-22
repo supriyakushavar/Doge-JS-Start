@@ -1,0 +1,21 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #ccc;
+}
+
+.container{
+    text-align: center;
+    padding: 30px;
+}
+
+#doge-image{
+    display: none;
+}
+
+#doge img{
+    width: 100px;
+    height: 100px;
+}
