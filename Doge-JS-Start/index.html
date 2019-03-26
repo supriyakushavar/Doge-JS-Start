@@ -13,7 +13,6 @@
         <button type="button"   onmouseover='putImage()' class="btn btn-primary btn-lg" id="doge">
             Doggo
         </button>
-        <img src="doge.png" id="doge-image" />
     </div>
     <script src="script.js" ></script>
     <script>
@@ -22,11 +21,20 @@
         function myfunction(){
             document.getElementById('doge').innerHTML="Woof!";
         }
-        function putImage(){
-            document.getElementById('doge-image').style.display="block";
-        }
-        let button = document.getElementById('doge');
-       
+        
+        var button = document.getElementById('doge');
+        button.addEventListener("mouseover",function (){
+            if (document.getElementById('stupidDog')){
+                return;
+            }
+            var dogeImage = document.createElement('img');
+            dogeImage.src="doge.png";
+            dogeImage.id='stupidDog';
+            button.appendChild(dogeImage);
+        });
+        // button.addEventListener("mouseleave", function(){
+        //     button.innerHTML = "woof";
+        // });
         var count = 0;
         button.addEventListener("click",function counter(){
             if(count ==0){
@@ -36,15 +44,19 @@
             }
         });
         function firstclick(){
-            document.getElementById("doge-image").style.marginLeft="800px";
+            if (document.getElementById('SmartDog')){
+                return;
+            }
+            var dogeImageBody = document.createElement('img');
+            dogeImageBody.src="doge.png";
+            dogeImageBody.id='SmartDog';
+            document.body.appendChild(dogeImageBody);
             count++;
         }
         function secondclick(){
-            document.getElementById("doge-image").style.display="none";
-            console.log("2");
+            document.getElementById('SmartDog').style.display="none";
+            
         }
-
-        
     </script>
 </body>
 </html>
