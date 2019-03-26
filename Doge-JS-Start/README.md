@@ -1,4 +1,23 @@
-Instructions
+## Link : https://supriyakushavar.github.io/Doge-JS-Start/
+
+
+## Things learnt doing this exercise 
+
+-addEventListener , how to create element in Javascript and append it to body
+-learnt how to implement counter function to make things to happen for multiple clicks
+
+
+## Problems faced
+
+-on mouse over multiple images were getting added hence click function was not working on multiple image
+
+##Fix for the problem
+
+Used if loop to just add the image only once
+
+
+## Exercise Instructions
+
 
     Create a simple html page with one button in the middle of the page
     Give this button the id "doge"
